@@ -1,12 +1,18 @@
-
+import { Routes, Route} from 'react-router-dom'
+import Header from './components/Header';
+// import Nav from './components/Nav'
 import './App.css';
+import Articles from './components/Articles'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+     <Header />
+     {/* <Nav /> */}
+    <Routes>
+      <Route path="/" element={<Articles />}></Route>
+     
+    </Routes>
     </div>
   );
 }
