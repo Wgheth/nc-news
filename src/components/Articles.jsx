@@ -23,16 +23,17 @@ const Articles = ()=>{
             {articles.map((article)=>{
             
                     return(
+                        
                         <ArticleTile 
                         articleTitle={article.title}
+                        Id = {article.article_id}
                         img = {article.article_img_url}
                         author={article.author}
                         created={article.created_at}
                         key={article.article_id}
                         />
-                       
-                           
-                    )
+                      
+)
                  
             })}
             </div>
