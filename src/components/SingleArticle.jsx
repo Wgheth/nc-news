@@ -19,12 +19,10 @@ import { getArticleById } from "../utils/api";
       }
 
     return (
-        <div>
+        <div className="single_article">
      
      <h4> {article.title}  </h4>
-    {/* <p>{article.author}</p>
-    <p>{article.topic}</p> */}
-    <div>{article.body}</div>
+    <p>{article.body}</p>
     <img src={article.article_img_url} alt={article.img}></img>
     
      </div>
