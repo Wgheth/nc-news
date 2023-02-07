@@ -13,7 +13,7 @@ const Articles = ()=>{
     },[])
     
     if (loading){
-        return <h2>Loadin........</h2>
+        return <h2>Loading........</h2>
     }
 
     return (
@@ -41,3 +41,5 @@ const Articles = ()=>{
     );
 };
 export default Articles;
+
+// <Link to={'/articles/${article.article_id}'} ></Link>
