@@ -4,14 +4,18 @@ import { ArticleTile } from "./Article_tile";
 
 const Articles = ()=>{
     const [articles, setArticles] = useState([]);
-
+    const [loading, setLoading] = useState(true)
     useEffect(()=>{
         getArticles().then((articlesFropmApi) => {
-            
+            setLoading(false)
             setArticles(articlesFropmApi)
         })
     },[])
     
+    if (loading){
+        return <h2>Loadin........</h2>
+    }
+
     return (
         <section>
             <h2 className="articles_heading">Articles</h2>
