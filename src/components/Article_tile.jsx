@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 export const ArticleTile = (props) => {
 const { articleTitle, img, author, created, Id } = props
-
+console.log("yyyyyyyyyyyyyyyyy")
     return(
         <div className="articles_div">
             <h3>Title: {articleTitle}</h3>
