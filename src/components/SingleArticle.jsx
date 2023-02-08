@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
+
 import { getArticleById, getCommentsById } from "../utils/api";
 import {CommentsCard} from "./CommentsCard"
+
 
 
 
@@ -9,6 +11,7 @@ import {CommentsCard} from "./CommentsCard"
      const {article_id} = useParams();
      const [article, setArticle] = useState("");
      const [loading, setLoading] = useState(true);
+
      const [comments, setComments] = useState("");
     useEffect(()=>{
         Promise.all([getArticleById(article_id), getCommentsById(article_id)]).then(([articleFropmApi, commentsFropmApi]) => {
@@ -46,6 +49,7 @@ import {CommentsCard} from "./CommentsCard"
       })
 
       }
+
      </div>
   )
 

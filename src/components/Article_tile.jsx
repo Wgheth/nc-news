@@ -6,8 +6,9 @@ const { articleTitle, img, author, created, Id } = props
         <div className="articles_div">
             <Link to={`/articles/${Id}`} >
             <h3>Title: {articleTitle}</h3>
+
             </Link>
-             
+            
             <p>Author: {author}</p>
             <p>Created at: {created}</p>
             <img src={img} alt={img}></img>
