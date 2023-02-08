@@ -41,5 +41,3 @@ const Articles = ()=>{
     );
 };
 export default Articles;
-
-// <Link to={'/articles/${article.article_id}'} ></Link>
