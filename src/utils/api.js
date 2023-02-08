@@ -15,6 +15,7 @@ export const getArticles = () => {
 
 export const getArticleById= (articleId) => { 
     return articlesAPI.get(`/articles/${articleId}`).then(({data}) =>{
+       
         return data
     });
 };

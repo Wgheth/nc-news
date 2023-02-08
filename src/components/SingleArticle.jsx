@@ -17,7 +17,7 @@ import {CommentsCard} from "./CommentsCard"
         setComments(commentsFropmApi)
             
         })
-    }, [article_id])
+    }, [article_id,])
     if (loading) {
         return <h3>Loading...</h3>;
       }
@@ -34,11 +34,12 @@ import {CommentsCard} from "./CommentsCard"
         return <ul>
           <li><CommentsCard 
         key={comment.comment_id}
+        Title={article.title}
         id={comment.article_id}
         comment={comment.body} 
         author={comment.author}
         timestamp={comment.created_at}
-       
+     
         />
         </li>
         </ul>
