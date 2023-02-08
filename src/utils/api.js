@@ -23,3 +23,7 @@ export const getCommentsById= (articleId) => {
         return data
     });
 };
+export const upateCommentVotes = (articleId, value) => { 
+return articlesAPI.patch(`/articles/${articleId}`, {inc_votes: value});
+  
+};

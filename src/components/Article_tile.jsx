@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
+
 export const ArticleTile = (props) => {
-const { articleTitle, img, author, created, Id } = props
+const { articleTitle, img, author, created, Id} = props
 
     return(
         <div className="articles_div">
