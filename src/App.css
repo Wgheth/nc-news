@@ -10,8 +10,13 @@
       pink -11px 11px, lightblue -15px 15px, rgb(234, 94, 94) -19px 19px;
   }
 
-
-
+.comments_header {
+  font-size: 32px;
+  background-color: #795d65;
+}
+.comments_card {
+  background-color: #5c7a7a;
+}
 .articles {
   background-color: #adb9cf;
   border-radius: 2em;
@@ -22,8 +27,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.single_article p{ 
+  padding: 10px;
+  background-color: #adb9cf;
+  box-shadow: 7px 2px 10px 2px #1c87c9;
 
 }
+
+
+.single_article img {
+  padding: 20px;
+  /* max-width: 300px */
+}
+.single_article { 
+ 
+  background-color:#2b7c7c;
+  
+
+}
+
 .articles_div {
 background-color: white;
   /* grid-template-rows: auto; */
