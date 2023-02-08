@@ -10,8 +10,13 @@
       pink -11px 11px, lightblue -15px 15px, rgb(234, 94, 94) -19px 19px;
   }
 
-
-
+.comments_header {
+  font-size: 32px;
+  background-color: #795d65;
+}
+.comments_card {
+  background-color: #5c7a7a;
+}
 .articles {
   background-color: #adb9cf;
   border-radius: 2em;

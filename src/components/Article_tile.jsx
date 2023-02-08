@@ -4,9 +4,9 @@ const { articleTitle, img, author, created, Id } = props
 
     return(
         <div className="articles_div">
-            <h3>Title: {articleTitle}</h3>
             <Link to={`/articles/${Id}`} >
-            <p>Id: {Id}</p>
+            <h3>Title: {articleTitle}</h3>
+
             </Link>
             
             <p>Author: {author}</p>
