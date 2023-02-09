@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
+
 import { getArticleById, getCommentsById } from "../utils/api";
 import {CommentsCard} from "./CommentsCard"
 import {Votes} from "./CommentsVotes"
+
+
+
 
     const SingleArticle = () => {
      const {article_id} = useParams();
      const [article, setArticle] = useState("");
      const [loading, setLoading] = useState(true);
+
      const [comments, setComments] = useState("");
-     
+
     useEffect(()=>{
         Promise.all([getArticleById(article_id), getCommentsById(article_id)]).then(([articleFropmApi, commentsFropmApi]) => {
         setLoading(false);
@@ -17,7 +22,7 @@ import {Votes} from "./CommentsVotes"
         setComments(commentsFropmApi)
             
         })
-    }, [article_id])
+    }, [article_id,])
     if (loading) {
         return <h3>Loading...</h3>;
       }
@@ -28,6 +33,7 @@ import {Votes} from "./CommentsVotes"
      <h4> {article.title}  </h4>
     <p>{article.body}</p>
     <img src={article.article_img_url} alt={article.img}></img>
+
      <Votes 
      id={article.article_id}
      votes={article.votes}/> 
@@ -41,13 +47,16 @@ import {Votes} from "./CommentsVotes"
         comment={comment.body} 
         author={comment.author}
         timestamp={comment.created_at}
+
         votes={comment.votes}
+
         />
         </li>
         </ul>
       })
 
       }
+
      </div>
   )
 

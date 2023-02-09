@@ -1,4 +1,3 @@
-
 export const CommentsCard = (props) => {
 
     const {comment, author, timestamp} = props
